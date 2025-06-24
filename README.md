@@ -41,6 +41,79 @@ npm run dev
 
 4. Open [http://localhost:3000](http://localhost:3000) in your browser.
 
+## 🚀 Deployment
+
+### Vercel (Recommended)
+
+1. **Push to GitHub**:
+```bash
+git add .
+git commit -m "Initial commit"
+git push origin main
+```
+
+2. **Deploy to Vercel**:
+   - Go to [vercel.com](https://vercel.com)
+   - Click "Import Project"
+   - Connect your GitHub repository
+   - Vercel will automatically detect Next.js settings
+
+3. **Environment Variables** (if needed):
+   - In Vercel dashboard, go to Project Settings > Environment Variables
+   - Add any required environment variables
+
+### Troubleshooting Deployment Issues
+
+If you get a **404 NOT_FOUND** error on Vercel:
+
+1. **Check Build Logs**:
+   - Go to Vercel Dashboard > Deployments
+   - Click on the failed deployment
+   - Check the build logs for errors
+
+2. **Verify File Structure**:
+   ```
+   app/
+   ├── layout.tsx
+   ├── page.tsx
+   ├── not-found.tsx
+   └── globals.css
+   ```
+
+3. **Check vercel.json** (if exists):
+   ```json
+   {
+     "framework": "nextjs",
+     "buildCommand": "npm run build",
+     "outputDirectory": ".next",
+     "installCommand": "npm install"
+   }
+   ```
+
+4. **Node.js Version**:
+   - Ensure your `package.json` has the engines field:
+   ```json
+   "engines": {
+     "node": ">=18"
+   }
+   ```
+
+5. **Clear Build Cache**:
+   - In Vercel dashboard: Settings > Functions > Clear Build Cache
+
+6. **Redeploy**:
+   - Go to Deployments tab
+   - Click "Redeploy" on the latest deployment
+
+### Manual Build Test
+
+```bash
+npm run build
+npm start
+```
+
+If this works locally but fails on Vercel, the issue is likely environment-specific.
+
 ## 🏗️ Project Structure
 
 ```
@@ -48,6 +121,7 @@ prototype-scrollytelling/
 ├── app/
 │   ├── layout.tsx          # Root layout with metadata
 │   ├── page.tsx            # Main scrollytelling page
+│   ├── not-found.tsx       # Custom 404 page
 │   └── globals.css         # Global styles with Tailwind
 ├── components/
 │   ├── scroll-section.tsx  # Reusable scroll section component
@@ -56,6 +130,11 @@ prototype-scrollytelling/
 │   └── useScrollAnimation.ts # Custom hook for scroll animations
 ├── utils/
 │   └── cn.ts               # Class name utility function
+├── public/
+│   ├── hero-icon.svg       # Custom hero section icon
+│   ├── favicon.ico         # Website favicon
+│   ├── next.svg            # Next.js logo
+│   └── vercel.svg          # Vercel logo
 └── Configuration files...
 ```
 
@@ -106,20 +185,6 @@ const { elementRef, isVisible } = useScrollAnimation({
   threshold: 0.4,
   triggerOnce: true
 })
-```
-
-## 🚀 Deployment
-
-The project is optimized for deployment on Vercel:
-
-1. Push your code to GitHub
-2. Connect your repository to Vercel
-3. Deploy automatically on every push
-
-Alternatively, build for any Node.js hosting:
-```bash
-npm run build
-npm start
 ```
 
 ## 🎯 Future Enhancements
