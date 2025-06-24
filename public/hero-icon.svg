@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" fill="none">
+  <defs>
+    <linearGradient id="coinGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#3B82F6;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#8B5CF6;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Main coin circle -->
+  <circle cx="100" cy="100" r="80" fill="url(#coinGradient)" stroke="#fff" stroke-width="4"/>
+  
+  <!-- Inner design -->
+  <circle cx="100" cy="100" r="60" fill="none" stroke="#fff" stroke-width="3" opacity="0.7"/>
+  
+  <!-- Pillar symbols -->
+  <rect x="70" y="80" width="15" height="40" fill="#fff" rx="2"/>
+  <rect x="92.5" y="70" width="15" height="50" fill="#fff" rx="2"/>
+  <rect x="115" y="85" width="15" height="35" fill="#fff" rx="2"/>
+  
+  <!-- Swiss cross -->
+  <g transform="translate(100, 50)">
+    <rect x="-8" y="-3" width="16" height="6" fill="#fff"/>
+    <rect x="-3" y="-8" width="6" height="16" fill="#fff"/>
+  </g>
+  
+  <!-- Sparkles -->
+  <g fill="#fff" opacity="0.8">
+    <circle cx="140" cy="60" r="2"/>
+    <circle cx="160" cy="90" r="1.5"/>
+    <circle cx="145" cy="140" r="2"/>
+    <circle cx="60" cy="140" r="1.5"/>
+    <circle cx="40" cy="90" r="2"/>
+    <circle cx="55" cy="60" r="1.5"/>
+  </g>
+</svg> 

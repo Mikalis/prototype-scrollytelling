@@ -18,8 +18,12 @@ export default function HomePage() {
       {/* Hero Section */}
       <ScrollSection>
         <div className="relative">
-          <div className="w-72 h-72 mx-auto mb-8 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full flex items-center justify-center animate-float">
-            <div className="text-white text-6xl">💰</div>
+          <div className="w-72 h-72 mx-auto mb-8 animate-float">
+            <img 
+              src="/hero-icon.svg" 
+              alt="3-Säulen-System Schweiz" 
+              className="w-full h-full object-contain"
+            />
           </div>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
             Deine Zukunft, dein Plan
