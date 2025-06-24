@@ -6,6 +6,7 @@ import { CompanyStats } from '@/components/company-stats'
 import { TeamGreeting } from '@/components/team-greeting'
 import { AnimatedVideo } from '@/components/animated-videos'
 import { PitchShowcase } from '@/components/pitch-showcase'
+import { Saule3aBenefits } from '@/components/saule-3a-benefits'
 import { motion } from 'framer-motion'
 import { Shield, PiggyBank, TrendingUp, Users, Building, Target, Sparkles, Zap, Coffee, Award, Gift, Star, Coins, Unlock, Home, FileText, Briefcase, Lightbulb } from 'lucide-react'
 
@@ -89,8 +90,8 @@ export default function HomePage() {
               transition={{ duration: 0.8, delay: 0.7 }}
               className="text-xl md:text-2xl mb-12 leading-relaxed font-light"
             >
-              Entdecke die super-fancy, interaktive Welt der Schweizer Altersvorsorge! 
-              <br />Mit verrückten Animationen, Quizzes und personalisierten Elementen! 🚀
+              Maximiere deine Steuervorteile mit der Säule 3a! 
+              <br />CHF 7,258 pro Jahr sparen und dabei Steuern sparen - jetzt mit 2025 Updates! 💰
             </motion.p>
             
             <motion.div
@@ -187,20 +188,20 @@ export default function HomePage() {
         <div className="container mx-auto px-6">
           <CompanyStats 
             companyName="Säule 3a"
-            stats={[
+                          stats={[
               {
                 icon: "💰",
-                label: "Max. Einzahlung/Jahr",
-                value: 7056,
+                label: "Max. Einzahlung 2025",
+                value: 7258,
                 suffix: " CHF",
                 color: "text-green-600",
                 bgColor: "bg-green-100"
               },
               {
-                icon: "🏦",
-                label: "Anbieter in der Schweiz",
-                value: 50,
-                suffix: "+",
+                icon: "🏆",
+                label: "Max. ohne Pensionskasse",
+                value: 36288,
+                suffix: " CHF",
                 color: "text-blue-600",
                 bgColor: "bg-blue-100"
               },
@@ -221,23 +222,44 @@ export default function HomePage() {
                 bgColor: "bg-yellow-100"
               },
               {
-                icon: "🕐",
-                label: "Jahre bis Pensionierung",
-                value: 30,
-                suffix: " Max",
+                icon: "⏰",
+                label: "Vorbezug frühestens",
+                value: 5,
+                suffix: " Jahre vor Pension",
                 color: "text-orange-600",
                 bgColor: "bg-orange-100"
               },
               {
                 icon: "🏠",
-                label: "Frühe Auszahlung für Eigenheim",
-                value: 100,
-                suffix: "% möglich",
+                label: "Vorbezug-Gründe",
+                value: 3,
+                suffix: " erlaubt",
                 color: "text-indigo-600",
                 bgColor: "bg-indigo-100"
               }
             ]}
           />
+        </div>
+      </ScrollSection>
+
+      {/* Säule 3a Benefits Section */}
+      <ScrollSection className="py-20 bg-gradient-to-br from-gray-50 to-blue-50">
+        <div className="container mx-auto px-6">
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-12"
+          >
+            <h2 className="text-5xl font-bold mb-4 bg-gradient-to-r from-green-600 to-blue-600 bg-clip-text text-transparent">
+              Säule 3a Vorteile 2025 ⚡
+            </h2>
+            <p className="text-xl text-gray-600">
+              Entdecke alle Vorteile der gebundenen Vorsorge mit den neuesten Updates
+            </p>
+          </motion.div>
+          
+          <Saule3aBenefits />
         </div>
       </ScrollSection>
 
@@ -262,10 +284,10 @@ export default function HomePage() {
               transition={{ duration: 2, repeat: Infinity }}
               className="text-5xl font-bold text-white mb-4"
             >
-              Säule 3a Quiz! 🧠💰
+              Säule 3a Quiz 2025! 🧠💰
             </motion.h2>
             <p className="text-xl text-white/90">
-              Teste dein Wissen über die Säule 3a und werde zum Vorsorge-Profi!
+              Teste dein Wissen mit den neuesten 2025 Updates und werde zum Vorsorge-Profi!
             </p>
           </motion.div>
           
@@ -662,8 +684,8 @@ export default function HomePage() {
             </motion.h2>
             
             <p className="text-xl mb-12 leading-relaxed">
-              Mit den 3 Säulen der Schweiz bist du optimal für die Zukunft gerüstet. 
-              Starte jetzt und profitiere von den Vorteilen!
+              Spare bis zu CHF 7,258 pro Jahr und reduziere deine Steuern um bis zu 35%! 
+              Die Säule 3a ist dein Schlüssel zur finanziellen Unabhängigkeit.
             </p>
             
             <motion.div
