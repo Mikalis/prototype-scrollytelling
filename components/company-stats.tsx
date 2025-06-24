@@ -15,7 +15,14 @@ interface Stat {
 
 interface CompanyStatsProps {
   companyName?: string
-  stats?: Partial<Stat>[]
+  stats?: Array<{
+    icon?: React.ReactNode | string
+    label?: string
+    value?: number
+    suffix?: string
+    color?: string
+    bgColor?: string
+  }>
 }
 
 export function CompanyStats({ 
@@ -77,7 +84,8 @@ export function CompanyStats({
 
   const stats = customStats ? customStats.map((custom, index) => ({
     ...defaultStats[index],
-    ...custom
+    ...custom,
+    icon: typeof custom.icon === 'string' ? custom.icon : custom.icon || defaultStats[index]?.icon
   })) : defaultStats
 
   useEffect(() => {
@@ -159,17 +167,21 @@ export function CompanyStats({
               />
               
               {/* Icon */}
-              <motion.div
-                animate={{ rotate: [0, 5, -5, 0] }}
-                transition={{ 
-                  duration: 2,
-                  repeat: Infinity,
-                  ease: "easeInOut"
-                }}
-                className={`${stat.color} mb-4 relative z-10`}
-              >
-                {stat.icon}
-              </motion.div>
+                             <motion.div
+                 animate={{ rotate: [0, 5, -5, 0] }}
+                 transition={{ 
+                   duration: 2,
+                   repeat: Infinity,
+                   ease: "easeInOut"
+                 }}
+                 className={`${stat.color} mb-4 relative z-10`}
+               >
+                 {typeof stat.icon === 'string' ? (
+                   <div className="text-4xl">{stat.icon}</div>
+                 ) : (
+                   stat.icon
+                 )}
+               </motion.div>
 
               {/* Counter */}
               <motion.div

@@ -108,7 +108,7 @@ export default function HomePage() {
                 whileTap={{ scale: 0.95 }}
                 className="bg-white text-red-600 px-8 py-4 rounded-full font-bold text-lg shadow-2xl hover:shadow-white/30 transition-all duration-300"
               >
-                Quiz starten! 🎮
+                Säule 3a Quiz! 🧠
               </motion.button>
               
               <motion.button
@@ -120,7 +120,7 @@ export default function HomePage() {
                 whileTap={{ scale: 0.95 }}
                 className="border-2 border-white text-white px-8 py-4 rounded-full font-bold text-lg bg-white/10 backdrop-blur-sm hover:bg-white/20 transition-all duration-300"
               >
-                Team kennenlernen! 👥
+                Experten kennenlernen! 💼
               </motion.button>
             </motion.div>
           </div>
@@ -146,17 +146,97 @@ export default function HomePage() {
       <ScrollSection className="py-20 bg-gradient-to-r from-indigo-50 to-purple-50">
         <div className="container mx-auto px-6">
           <TeamGreeting 
-            projectName="Swiss Pension Guide"
+            projectName="Säule 3a Guide"
             showParticles={true}
+            teamMembers={[
+              {
+                name: "Alexandra",
+                role: "Vorsorge-Expertin",
+                message: "15 Jahre Erfahrung mit der Säule 3a! 💰",
+                emoji: "👩‍💼",
+                color: "from-blue-400 to-purple-500"
+              },
+              {
+                name: "Reto",
+                role: "Steuer-Spezialist",
+                message: "Maximiere deine Steuervorteile! 📊",
+                emoji: "👨‍💻",
+                color: "from-green-400 to-blue-500"
+              },
+              {
+                name: "Sophie",
+                role: "Investment-Beraterin",
+                message: "ETFs und Fonds für optimale Rendite! 📈",
+                emoji: "👩‍🎓",
+                color: "from-purple-400 to-pink-500"
+              },
+              {
+                name: "Marc",
+                role: "Finanz-Planer",
+                message: "Deine Zukunft ist in sicheren Händen! 🛡️",
+                emoji: "👨‍🔧",
+                color: "from-orange-400 to-red-500"
+              }
+            ]}
           />
         </div>
       </ScrollSection>
 
-      {/* Company Stats Section */}
+      {/* Säule 3a Stats Section */}
       <ScrollSection className="py-20 bg-white">
         <div className="container mx-auto px-6">
           <CompanyStats 
-            companyName="Unic"
+            companyName="Säule 3a"
+            stats={[
+              {
+                icon: "💰",
+                label: "Max. Einzahlung/Jahr",
+                value: 7056,
+                suffix: " CHF",
+                color: "text-green-600",
+                bgColor: "bg-green-100"
+              },
+              {
+                icon: "🏦",
+                label: "Anbieter in der Schweiz",
+                value: 50,
+                suffix: "+",
+                color: "text-blue-600",
+                bgColor: "bg-blue-100"
+              },
+              {
+                icon: "📊",
+                label: "Durchschnittliche Rendite",
+                value: 4,
+                suffix: "% p.a.",
+                color: "text-purple-600",
+                bgColor: "bg-purple-100"
+              },
+              {
+                icon: "🎯",
+                label: "Steuerersparnis/Jahr",
+                value: 2500,
+                suffix: " CHF",
+                color: "text-yellow-600",
+                bgColor: "bg-yellow-100"
+              },
+              {
+                icon: "🕐",
+                label: "Jahre bis Pensionierung",
+                value: 30,
+                suffix: " Max",
+                color: "text-orange-600",
+                bgColor: "bg-orange-100"
+              },
+              {
+                icon: "🏠",
+                label: "Frühe Auszahlung für Eigenheim",
+                value: 100,
+                suffix: "% möglich",
+                color: "text-indigo-600",
+                bgColor: "bg-indigo-100"
+              }
+            ]}
           />
         </div>
       </ScrollSection>
@@ -182,10 +262,10 @@ export default function HomePage() {
               transition={{ duration: 2, repeat: Infinity }}
               className="text-5xl font-bold text-white mb-4"
             >
-              Teste dein Wissen! 🧠⚡
+              Säule 3a Quiz! 🧠💰
             </motion.h2>
             <p className="text-xl text-white/90">
-              Wie gut kennst du die Schweizer Altersvorsorge? Finde es heraus!
+              Teste dein Wissen über die Säule 3a und werde zum Vorsorge-Profi!
             </p>
           </motion.div>
           
@@ -524,37 +604,37 @@ export default function HomePage() {
         </div>
       </ScrollSection>
 
-      {/* Pitch Showcase Section */}
+      {/* Säule 3a Showcase Section */}
       <ScrollSection className="py-20 bg-gradient-to-br from-indigo-50 to-purple-50">
         <div className="container mx-auto px-6">
           <PitchShowcase 
-            title="Dein persönliches Vorsorge-Team"
-            subtitle="Maßgeschneiderte Lösungen für deine finanzielle Zukunft"
-            customMessage="Gemeinsam gestalten wir deine optimale Vorsorgestrategie! 🎯"
+            title="Deine Säule 3a Experten"
+            subtitle="Maximiere deine Steuervorteile und Altersvorsorge"
+            customMessage="Starte heute mit deiner optimalen Säule 3a Strategie! 💰🚀"
             projectStats={{
-              duration: "4 Wochen",
-              teamSize: 3,
-              technologies: ["Säule 3a", "Säule 3b", "ETF Portfolio", "Steueroptimierung"],
-              specialFeatures: ["Individuelle Beratung", "Digitale Tools", "Regelmäßige Updates", "Langfristige Betreuung"]
+              duration: "Lebenslang",
+              teamSize: 4,
+              technologies: ["Säule 3a Konto", "ETF Sparpläne", "Versicherungs-Lösungen", "Steuer-Optimierung"],
+              specialFeatures: ["Jährlich CHF 7,056 sparen", "Bis zu 35% Steuern sparen", "Flexible Anlagestrategie", "Frühe Auszahlung für Eigenheim"]
             }}
             teamMembers={[
               {
-                name: "Julia",
-                role: "Vorsorge-Beraterin",
+                name: "Dr. Rahel Müller",
+                role: "Säule 3a Expertin",
                 avatar: "👩‍💼",
-                message: "15 Jahre Erfahrung in der Finanzberatung!"
+                message: "20 Jahre Erfahrung mit der Schweizer Altersvorsorge!"
               },
               {
-                name: "Thomas",
-                role: "Investment-Experte",
+                name: "Beat Schneider",
+                role: "ETF-Spezialist",
                 avatar: "👨‍💻",
-                message: "Optimiere dein Portfolio für maximale Rendite!"
+                message: "Passive Indexfonds für optimale Langzeit-Rendite!"
               },
               {
-                name: "Maria",
-                role: "Steuer-Spezialistin",
+                name: "Anna Zimmermann",
+                role: "Steuer-Optimierung",
                 avatar: "👩‍🎓",
-                message: "Hole das Maximum aus deinen Steuervorteilen heraus!"
+                message: "Spare bis zu CHF 2,500 Steuern pro Jahr!"
               }
             ]}
           />
@@ -607,7 +687,7 @@ export default function HomePage() {
                 }}
                 className="bg-white text-red-600 px-10 py-5 rounded-full font-bold text-xl shadow-2xl hover:shadow-white/30 transition-all duration-300"
               >
-                Jetzt starten! 🚀
+                Säule 3a starten! 💰
               </motion.button>
               
               <motion.button
