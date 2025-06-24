@@ -5,6 +5,7 @@ import { InteractiveQuiz } from '@/components/interactive-quiz'
 import { CompanyStats } from '@/components/company-stats'
 import { TeamGreeting } from '@/components/team-greeting'
 import { AnimatedVideo } from '@/components/animated-videos'
+import { PitchShowcase } from '@/components/pitch-showcase'
 import { motion } from 'framer-motion'
 import { Shield, PiggyBank, TrendingUp, Users, Building, Target, Sparkles, Zap, Coffee, Award, Gift, Star, Coins, Unlock, Home, FileText, Briefcase, Lightbulb } from 'lucide-react'
 
@@ -519,6 +520,43 @@ export default function HomePage() {
             title="Jetzt loslegen!"
             description="Praktische Tipps für den Einstieg in die private Vorsorge"
             className="max-w-4xl mx-auto"
+          />
+        </div>
+      </ScrollSection>
+
+      {/* Pitch Showcase Section */}
+      <ScrollSection className="py-20 bg-gradient-to-br from-indigo-50 to-purple-50">
+        <div className="container mx-auto px-6">
+          <PitchShowcase 
+            title="Dein persönliches Vorsorge-Team"
+            subtitle="Maßgeschneiderte Lösungen für deine finanzielle Zukunft"
+            customMessage="Gemeinsam gestalten wir deine optimale Vorsorgestrategie! 🎯"
+            projectStats={{
+              duration: "4 Wochen",
+              teamSize: 3,
+              technologies: ["Säule 3a", "Säule 3b", "ETF Portfolio", "Steueroptimierung"],
+              specialFeatures: ["Individuelle Beratung", "Digitale Tools", "Regelmäßige Updates", "Langfristige Betreuung"]
+            }}
+            teamMembers={[
+              {
+                name: "Julia",
+                role: "Vorsorge-Beraterin",
+                avatar: "👩‍💼",
+                message: "15 Jahre Erfahrung in der Finanzberatung!"
+              },
+              {
+                name: "Thomas",
+                role: "Investment-Experte",
+                avatar: "👨‍💻",
+                message: "Optimiere dein Portfolio für maximale Rendite!"
+              },
+              {
+                name: "Maria",
+                role: "Steuer-Spezialistin",
+                avatar: "👩‍🎓",
+                message: "Hole das Maximum aus deinen Steuervorteilen heraus!"
+              }
+            ]}
           />
         </div>
       </ScrollSection>
