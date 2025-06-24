@@ -46,6 +46,10 @@ export default function HomePage() {
             <video 
               className="w-full h-auto rounded-lg shadow-lg"
               controls
+              autoPlay
+              muted
+              loop
+              playsInline
               preload="metadata"
               poster="/hero-icon.svg"
             >
@@ -189,6 +193,10 @@ export default function HomePage() {
             <video 
               className="w-full h-auto rounded-lg shadow-lg"
               controls
+              autoPlay
+              muted
+              loop
+              playsInline
               preload="metadata"
               poster="/hero-icon.svg"
             >
