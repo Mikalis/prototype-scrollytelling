@@ -22,4 +22,17 @@
   .scene.visible {
     @apply opacity-100 translate-y-0;
   }
+  
+  /* Video styling */
+  video {
+    @apply transition-all duration-300 ease-in-out;
+  }
+  
+  video:hover {
+    @apply scale-105 shadow-xl;
+  }
+  
+  video:focus {
+    @apply outline-none ring-4 ring-blue-500 ring-opacity-50;
+  }
 } 

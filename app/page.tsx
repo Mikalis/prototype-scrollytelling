@@ -36,10 +36,27 @@ export default function HomePage() {
 
       {/* Why Three Pillars */}
       <ScrollSection>
-        <div className="space-y-6">
+        <div className="space-y-8">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
             Warum drei Säulen?
           </h2>
+          
+          {/* Video 1 */}
+          <div className="w-full max-w-4xl mx-auto">
+            <video 
+              className="w-full h-auto rounded-lg shadow-lg"
+              controls
+              preload="metadata"
+              poster="/hero-icon.svg"
+            >
+              <source 
+                src="https://replicate.delivery/xezq/xfz0U06bqSw1AyiJsw7LjOjVXOBpmjJfe7K9XtRLifW26q7SB/tmpi29yh_f0.mp4" 
+                type="video/mp4" 
+              />
+              Ihr Browser unterstützt das Video-Element nicht.
+            </video>
+          </div>
+
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
             Ein Haus braucht ein stabiles Fundament – genauso wie deine Altersvorsorge.
           </p>
@@ -166,6 +183,23 @@ export default function HomePage() {
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
             Bereit loszulegen?
           </h2>
+          
+          {/* Video 2 */}
+          <div className="w-full max-w-4xl mx-auto">
+            <video 
+              className="w-full h-auto rounded-lg shadow-lg"
+              controls
+              preload="metadata"
+              poster="/hero-icon.svg"
+            >
+              <source 
+                src="https://replicate.delivery/xezq/IZvJUH7VaYo9BBq9lhMjAHXCz1WJUuOWyXx2fFGcKXcrlaYKA/tmpxsomu815.mp4" 
+                type="video/mp4" 
+              />
+              Ihr Browser unterstützt das Video-Element nicht.
+            </video>
+          </div>
+
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
             Je früher du startest, desto mehr Zinseszins.
           </p>
